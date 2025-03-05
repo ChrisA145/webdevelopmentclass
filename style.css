@@ -12,6 +12,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Applying the same color to multiple elements */
 p, .title, .skill, h4, ul, h3, h2 {
     color: #cbc3e3;
 }
@@ -20,45 +21,58 @@ p, .title, .skill, h4, ul, h3, h2 {
 #Home{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    height: 80vh; /* Changes around the height of the section */
+    text-align: center;/* Centers inline text elements */
+}
+.Pic{
+    width: 300px; /* Adjust size */
+    height: 300px; /* Keep it square */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensures the image fills the area */
+    display: block; /* Helps with centering */
+    margin: 0 auto 20px auto; /* Centers it */
+}
+
+.home-content {
+    display: flex;
     align-items: center;
-    height: 80vh;
+    flex-direction: column; /* Stack vertically */
     text-align: center;
 }
-
 /* creating the about section */
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
+.top-section {
+    display: flex; /* Makes the sections sit next to each other */
+    justify-content: space-between; /* Spreads them out */
+    gap: 20px; /* Adds space between them */
+    margin-bottom: 20px; /* Space before Work Experience */
 }
-.about-layout {
+
+/* Making sure the sections take up an equal amount of space */
+.top-section .about-section {
+    flex: 1;
+}
+
+
+.bottom-section {
     display: flex;
-    gap: 20px;
+    justify-content: center;
 }
 
-.left-column {
-    display: flex;
-    flex-direction: column;
-    flex: 1; 
-}
-
-.right-column {
-    flex: 2; 
-}
-
+/* styling for sections */
 .about-section {
     background-color: #2c2c3e;
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
-.title {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 50px;
+/* Make Work Experience full-width */
+.work-experience {
+    width: 100%;
 }
+
 /*creating the contact page */
 #Contact {
     text-align: center;
